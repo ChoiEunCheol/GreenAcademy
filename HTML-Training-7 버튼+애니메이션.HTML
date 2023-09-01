@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+ 
+    
+
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    #root{
+      width: 100vw;
+      height: 100vh;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    a{
+      color: #FFE8BB;
+      font-size: 0.85vw;
+
+      /* white-space: nowrap; */
+      
+      text-decoration: none;
+    } 
+        /* 링크버튼 색깔 정하는 것 */
+    /* a:link { color: black; }
+
+    a:visited { color: green; }
+
+    a:hover { color: blue; }
+
+    a:active { color: red; } */
+
+    /* 플레이스 홀더 글자 크기 */
+    input::placeholder { font-size: 110%; }
+
+        /* 모바일 */
+    @media (max-width: 650px) {
+      #root{
+        background-image: url("https://s3-alpha-sig.figma.com/img/d045/54cb/694f2b56b29676f402c0f936b802c083?Expires=1694390400&Signature=Pi0lgYWsf1-CtTlzHXvon4cJ87xr9-wdzRG-EgTHWKv7ilt2wXy-gGXlzwTK7JaCx7Q4xbJfQbxDv4P5TzNc-bsd6H9aVcnAS-1DqPHqBHP1VDmME4m-E~~o3VM5RNovV5~RCan5zp10R7Neg9Ljxts3aY85l3F0wJgDjBXxUBc0w0TYhaMc0kmnupG3tYhghbIb8tbodqAomcoceIdmibi9gTFPxg7ym7M~3Trrn9mM93ZjKGZSVU1gtK2rDs4xi3PxGgxE3761GrhsGzsgcz7o4bYVtRQp6LdG8A9wu~VhhDzBo~g9W92ounAdrm7qb0IpLafH777nTa3wt871kA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4");
+
+        background-position-x: 70%;
+        background-position-y: 80%;
+
+        /* 양이 안보임 위치 조절 하는거 알아봐야 됨 */
+      }
+      /* 가운데 배치 */
+      #root > div:first-child{
+        width: 91.3vw;
+        height: 37.7vh;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        flex-direction: column;
+
+        padding-top: 3vh;
+
+        border-radius: 20px;
+        border: 1px solid #FFDA92;
+        background: rgba(255, 218, 146, 0.30);
+        backdrop-filter: blur(12.5px);
+      }
+
+      #root > div:first-child> div:first-child{
+        width: 68vw;
+        height: 5.7vh;
+
+        display: flex;
+
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+
+        /* background-color: aqua; */
+    }
+
+    #root > div:first-child> div:first-child> div{
+        width: 68vw;
+        height: 2.5vh;
+        display: flex;
+        margin-bottom: 1vh;
+
+        border-radius: 5px;
+        background: #FFE8BB;
+
+        font-size: 0.7em;
+        color: #53516180;
+    }
+
+    #root > div:first-child> hr {
+      width: 68vw;
+      border-color: #535161;
+      margin: 1vh;
+    }
+
+    #root > div:first-child> div:last-child{
+      width: 68vw;
+      height: 4.6vh;
+      display: flex;
+      flex-direction: row;
+
+      /* background-color: violet; */
+    }
+    
+    #root > div:first-child> div:last-child> div:first-child{
+      width: 47vw;
+      height: 4.6vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+
+      /* background-color: red; */
+    }
+
+    #root > div:first-child> div:last-child> div:first-child> div{
+      width: 21vw;
+
+      color: #FFE8BB;
+      font-size: 0.9em;
+
+      /* 줄 바꿈 방지, 배분정렬이 더 나을지 고민해보기 */
+      white-space: nowrap;
+    }
+
+    input[type=text]{
+      border: none;
+      background-color: transparent;
+      color: rgba(83, 81, 97, 0.70);
+      background: #FFE8BB;
+      width: 68vw;
+
+      border-radius: 5px;
+      padding-left: 1.8vw;
+    }
+
+    input[type=password]{
+      border: none;
+      background-color: transparent;
+      color: rgba(83, 81, 97, 0.70);
+      background: #FFE8BB;
+      width: 68vw;
+
+      border-radius: 5px;
+      padding-left: 1.8vw;
+    }
+
+    button{
+      width: 21vw;
+      height: 4.6vh;
+      border-radius: 5px;
+      background-color: #535161;
+      color: #FFDA92;
+      font-weight: lighter;
+    }
+  }
+    /* --------------------------------------------------------------------------------------- */
+    /* PC */
+    @media (min-width: 651px) {
+      #root{
+        background-image: url("https://s3-alpha-sig.figma.com/img/d045/54cb/694f2b56b29676f402c0f936b802c083?Expires=1694390400&Signature=Pi0lgYWsf1-CtTlzHXvon4cJ87xr9-wdzRG-EgTHWKv7ilt2wXy-gGXlzwTK7JaCx7Q4xbJfQbxDv4P5TzNc-bsd6H9aVcnAS-1DqPHqBHP1VDmME4m-E~~o3VM5RNovV5~RCan5zp10R7Neg9Ljxts3aY85l3F0wJgDjBXxUBc0w0TYhaMc0kmnupG3tYhghbIb8tbodqAomcoceIdmibi9gTFPxg7ym7M~3Trrn9mM93ZjKGZSVU1gtK2rDs4xi3PxGgxE3761GrhsGzsgcz7o4bYVtRQp6LdG8A9wu~VhhDzBo~g9W92ounAdrm7qb0IpLafH777nTa3wt871kA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4");
+        
+        /* 배경 위치 조절하는 거 */
+        background-position-y: 70%;
+        background-size: cover;
+
+      }
+      /* 가운데 배치 */
+      #root > div:first-child{
+        width: 17.1vw;
+        height: 9.7vh;
+
+        margin-bottom: 10vh;
+
+        display: flex;
+
+        align-self: flex-end;
+
+        flex-direction: column;
+      }
+
+      #root > div:first-child> div:first-child{
+        width: 16.7vw;
+
+        display: flex;
+        
+        flex-direction: column;
+    }
+
+    #root > div:first-child> div:first-child> div{
+        width: 16.7vw;
+        height: 2vh;
+        display: flex;
+
+        border-radius: 5px;
+        background: #FFE8BB;
+        vertical-align: middle;
+
+        margin-top: 0.9vh;
+
+        font-size: 0.7em;
+        color: #53516180;
+    }
+
+    #root > div:first-child> hr {
+      width: 16.7vw;
+      border-color: #535161;
+      margin-top: 0.8vh;
+      margin-bottom: 0.8vh;
+    }
+
+    #root > div:first-child> div:last-child{
+      width: 16.7vw;
+      height: 4.6vh;
+      display: flex;
+      flex-direction: row;
+    }
+    
+    #root > div:first-child> div:last-child> div:first-child{
+      width: 11.6vw;
+      height: 3.84vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+
+    input[type=text]{
+      border: none;
+      background-color: transparent;
+      color: rgba(83, 81, 97, 0.70);
+      height: 2vh;
+      margin-bottom: 0.8vh;
+
+      padding-left: 0.5vw;
+      border-radius: 5px;
+      background: #FFE8BB;
+    }
+
+    input[type=password]{
+      border: none;
+      background-color: transparent;
+      color: rgba(83, 81, 97, 0.70);
+      height: 2vh;
+
+      padding-left: 0.5vw;
+      border-radius: 5px;
+      background: #FFE8BB;
+    }
+
+    button{
+      width: 5.1vw;
+      height: 3.5vh;
+      border-radius: 5px;
+      background-color: #FFE8BB;
+      color: #535161;
+      font-weight: lighter;
+      font-size: 0.75em;
+    }
+
+    /* 이건 중간 사이즈 로그인 버튼 겹치는 현상 막기 위해서 */
+    @media (max-width: 1400px) {
+      a{
+        font-size: 4px;
+      }
+    }
+ } 
+
+  </style> 
+</head>
+<body>
+  <div id="root">
+    <!-- 정보입력 큰 상자 -->
+    <div>
+      <!-- ID랑 PW flex between 할거임 / 장남의 장남-->
+      <div>
+          <input type="text" placeholder="id">
+          <input type="password" placeholder="password">
+      </div>
+      <hr/>
+      <!-- 찾기, 회원가입, 로그인 -->
+      <div>
+        <!-- 찾기, 회원가입 -->
+        <div>
+          <a href="https://www.google.com/" target="_self">Forgot password?</a>
+          <a href="https://www.naver.com" target="_blank">Don’t have an account?</a>
+        </div>
+        <!-- 로그인 -->
+        <div>
+          <form action="230901.html">
+            <button>Sign In</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
