@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+  *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+    #root > ul:first-child{
+      background-color: rgba(101, 101, 101, 1);
+      color: rgba(206, 241, 215, 1);
+    }
+    #root > ul:last-child{
+      background-color: rgba(170, 198, 177, 1);
+    }
+    #root ul li{
+      list-style-type: none;
+    }
+    #root ul li a{
+      text-decoration: none;
+      color: rgba(101, 101, 101, 1);
+      font-size: 16px;
+    }
+
+  /* 너비 768px 미만은 모바일 기기, 768px~1024px은 태블릿, 1024px 이상은 데스크탑 */
+  
+  /* 모바일 */
+
+  @media (max-width : 768px){
+    #root{
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: row;
+    }
+    #root ul {
+      width: 50vw;
+      height: 100vh;
+
+      font-size: 36px;
+
+      
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  /* 태블릿 */
+
+  @media (min-width : 769px) and (max-width:1023px){
+    #root {
+      width: 100vw;
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    #root ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #root > ul:first-child{
+      height: 75.7vh;
+      font-size: 36px;
+    }
+    #root > ul:last-child{
+      height: 24.3vh;
+      display: inherit;
+      flex-direction: column;
+    }
+  }
+
+  /* PC */
+
+  @media (min-width : 1024px){
+    #root {
+      width: 100vw;
+      display: flex;
+      flex-direction: column-reverse;
+      background-color: rgba(170, 198, 177, 1);
+    }
+    #root ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #root > ul:first-child{
+      height: 86vh;
+      font-size: 36px;
+    }
+    #root > ul:last-child{
+      height: 14vh;
+      display: inherit;
+      flex-direction: row;
+      justify-content: space-between;
+
+      margin-right: 40vw;
+      margin-left: 40vw;
+    }
+  }
+  </style>
+</head>
+<body>
+  <div id=root>
+    <ul>DIGITAL</ul>
+    <ul>
+      <li><a href="./korea.html">KOREA</a></li>
+      <li><a href="./digital.html">DIGITAL</a></li>
+      <li><a href="./training.html">training</a></li>
+    </ul>
+  </div>
+</body>
+</html>
