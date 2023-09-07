@@ -1,0 +1,110 @@
+*{ margin: 0; padding: 0; box-sizing: border-box; }
+#root{
+  width: 100vw;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* --------------------------- 모바일 --------------------------- */
+
+@media (max-width: 768px){
+
+#root > div:nth-child(1){
+  height: 21vh;
+
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  justify-content: space-around;
+
+  padding-bottom: 1.87vh;
+
+  background-color: rgba(146, 172, 152, 1);
+ }
+#root > div:nth-child(1)  div {
+  width: 6.5vh;
+  height: 6.5vh;
+  background-color: #484848;
+  border-radius: 100%;
+ }
+
+/* --------------------------- 2번째 div --------------------------- */
+
+#root > div:nth-child(2){
+  height: 4.7vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: rgba(72, 72, 72, 1);
+}
+#root > div:nth-child(2) > div:nth-child(1){
+  width: 84vw;
+
+  display: flex;
+  align-items: center;
+
+  color: #FFF;
+  font-size: 0.75rem;
+}
+
+#root > div:nth-child(2) > div:nth-child(1) > div:nth-child(1){
+  
+  width: 3.3vh;
+  height: 3.3vh;
+  border-radius: 100%;
+  margin-left : 5.8vw;
+  margin-right: 3vw;
+
+  background-color: white;
+}
+#root > div:nth-child(2) > div:nth-child(2) {
+  display: flex;
+  margin-right: 3vw;
+}
+
+
+/* --------------------------- 3번째 div --------------------------- */
+
+#root > div:nth-child(3){
+  height: 43vh;
+  }
+
+/* --------------------------- 4번째 div --------------------------- */
+
+#root > div:nth-child(4){
+  height: 31.1vh;
+
+  background-color: rgba(146, 172, 152, 1);
+}
+#root > div:nth-child(4) > div:nth-child(1) {
+  height: 4.6vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  margin: 2vh 2vh 5vh 2vh;
+}
+#root > div:nth-child(4) > div:nth-child(1) div {
+  width: 7.4vw;
+  background-color:white;
+}
+#root > div:nth-child(4) > div:nth-child(2) > div:nth-child(1) {
+  height: 2.36vh;
+
+  margin: 2.62vh 5.81vw 3vh 5.81vw;
+
+  color: #484848;
+  font-size: 1rem;
+}
+#root > div:nth-child(4) > div:nth-child(2) > div:nth-child(2) {
+  margin: 0 5.81vw 2.62vh 5.81vw;
+
+  color: #484848;
+  font-size: 0.75rem;
+}
+}
+  
+/* --------------------------------------------------------------------------------- */
