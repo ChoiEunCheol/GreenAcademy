@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root">
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+    <div></div>
+  </div>
+</body>
+<script>
+  // ul 태그까지 경로
+  var ul = document.body.children[0].children[0];
+  var liFirst = ul.children[0]
+  var liSecond = ul.children[1]
+  var liThird = ul.children[2]
+
+
+  liFirst.textContent = "빨강";
+  liFirst.style.color = "red";
+  liFirst.style.width = "50px";
+  liFirst.style.height = "50px";
+
+  liSecond.textContent = "배경 검정 글씨 노랑";
+  liSecond.style.color = "yellow";
+  liSecond.style.backgroundColor = "black";
+
+  liThird.textContent = "점 없는 초록";
+  liThird.style.color = "green";
+  liThird.style.listStyle = "none";
+
+  var div = document.createElement('li');
+
+  console.dir(window);
+</script>
+</html>
