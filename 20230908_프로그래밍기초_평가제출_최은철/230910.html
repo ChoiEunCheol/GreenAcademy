@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+</head>
+<style>
+    .swiper {
+        width: 100vw;
+        height: 100vh;
+
+        display: flex;
+    }
+
+    .swiper-wrapper>div {
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        z-index: 1;
+    }
+
+
+    #aa {
+        position: absolute;
+        z-index: 2;
+    }
+
+    #aa>div:nth-child(1) {
+        width: 100px;
+        height: 1000px;
+    }
+
+    #aa>div:nth-child(2) {
+        width: 100px;
+        height: 1000px;
+        background-color: yellow;
+    }
+</style>
+
+<body>
+    <div>
+        <!-- Slider main container -->
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide" style="background-image: url(./picture1.jpg);">
+                    ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇ</div>
+                <div class="swiper-slide" style="background-image: url(./picture2.jpg);">ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇ</div>
+                <div class="swiper-slide" style="background-image: url(./picture3.jpg);">ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇ
+                </div>
+            </div>
+            <div id="aa">
+                <div>ddddddddd</div>
+                <div>ddddddddddd</div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const swiper = new Swiper('.swiper', {
+        // 방향은 세로, 마지막 이미지에서 처음으로 갈 것인지 설정
+        direction: 'vertical',
+        loop: true,
+
+        mousewheel: true,
+    });
+</script>
+
+</html>
+
+<!-- 사용자 지정 태그
+객체 접근으로 전체 서식 지정 -->
