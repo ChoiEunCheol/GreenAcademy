@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root">
+    <button>click</button>
+  </div>
+</body>
+<script>
+  let btn = window.document.body.children[0].children[0];
+  // console.dir(btn);
+
+  // let buttonQuery = document.querySelector('#root > button');
+  // console.dir(buttonQuery);
+
+  // 위 2가지가 같은 방식임
+
+  let handler = true; // 초기화
+  let root = document.getElementById("root");
+
+  btn.style.width = "95vw";
+  btn.style.height = "20vh";
+
+  const aa = document.createElement('div');
+      root.appendChild(aa);
+
+//----------------------------------------------------------------------------
+
+  btn.addEventListener('click', function(){
+    if (handler === true){
+      handler = false;
+      console.log(handler);
+      window.document.body.style.backgroundColor = "violet";
+      btn.style.backgroundColor = "red";
+      btn.style.color = "white";
+      btn.innerHTML = "Hello";
+
+      aa.textContent = "ㅎㅇ";
+      aa.style.fontSize = "10rem";
+    }
+    else {
+      handler = true;
+      console.log(handler);
+      window.document.body.style.backgroundColor = "yellow";
+      btn.style.backgroundColor = "blue";
+      btn.style.color = "black";
+      btn.innerHTML = "Bye";
+
+      aa.textContent = " ";
+    }
+
+// 위와 아래 같은 if문이지만 완전히 성격이 다름 / 요소만 바꾸는 것, 속성을 바꾸는 것
+
+    // if ( handler === true){
+    //   window.document.body.style.backgroundColor = "violet";
+    //   btn.style.backgroundColor = "red";
+    //   btn.style.color = "white";
+    //   btn.innerHTML = "Hello";
+
+    // }
+    // else{
+    //   window.document.body.style.backgroundColor = "yellow";
+    //   btn.style.backgroundColor = "blue";
+    //   btn.style.color = "black";
+    //   btn.innerHTML = "Bye";
+    // }
+  });
+//----------------------------------------------------------------------------
+    console.dir(btn);
+    console.dir(root);
+
+</script>
+</html>
