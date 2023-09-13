@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root">
+  <ul>
+   <li>피카츄</li> 
+   <li>라이츄</li> 
+   <li>파이리</li> 
+   <li>꼬부기</li> 
+   <li>버터풀</li> 
+   <li>야도란</li>
+   <li>피존투</li>
+  </ul>
+  </div>
+</body>
+<script>
+  let liItems = document.getElementsByTagName('li');
+    // 태그선택자의 원리
+  let rainbow = ["red", "orange", "yellow", "green", "blue", "navy", "violet"];
+
+  // for (let index=0; index<7 ; index ++){
+  //   liItems[index].style.color = rainbow[index];
+  // }
+  for (let index=0; index<7 ; index ++){
+    liItems[index].style.color = rainbow[6-index];
+    if (liItems[index].innerText==="꼬부기"){
+    console.log(`꼬부기 색깔은 ${rainbow[6-index]}입니다.`)
+  };
+
+  }
+  console.log(`마지막 원소는 ${rainbow[liItems.length-1]}색입니다.`)
+  
+
+  //   for (var i=6; i >= 0 ; --i){
+  //   // liItems[i].style.color = rainbow[i];
+  //   console.log(i);
+  // }
+</script>
+
+</html>
