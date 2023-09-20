@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="2.js"></script>
+</head>
+<body>
+    <div id="root">
+        <input id="tag" type="text" name="tag" placeholder="tag">
+        <input id="num1" type="number" name="num1" placeholder="num1">
+        <input id="num2" type="number" name="num2" placeholder="num2">
+        <input id="button" value="button" type="button">
+    </div>
+</body>
+<script>
+    const root = document.getElementById('root');
+    const tag = document.getElementById('tag');
+    const num1 = document.getElementById('num1');
+    const num2 = document.getElementById('num2');
+    const button = document.getElementById('button');
+
+    button.addEventListener('click', function(){
+        appendParent(root,makeElement(tag.value,calcFunc(num1.value,num2.value)));
+    })
+    // appendParent(root,makeElement("ul",300));
+</script>
+</html>
