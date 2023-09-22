@@ -1,0 +1,12 @@
+* {
+    margin: 0; padding: 0;
+}
+
+h2 {
+    color: yellow;
+    background-color: black;
+}
+
+p {
+    color: violet;
+}

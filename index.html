@@ -1,24 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="common.css" rel="stylesheet" type="text/css" />
 </head>
-<style>
-  #root {
-    width : 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-</style>
 <body>
-<div id="root">
-  <h1>최은철</h1>
-</div>
+    <h2 id="h2">Love Lee</h2>
+    <p>You know
+        내 스타일이 아닌 음악을 들어도
+        You know
+        좋아하지 않는 음식을 먹어도
+        우산 없이 비가 와 홀딱 다 젖어도 좋아
+        I love it because I love you</p>
+        
+    <p> 우리 관계 디비디비딥
+        매일 봐도 처음같이 비기비기닝
+        춤추고 싶어 빌리빌리진
+        우리 앞 우리 옆 시기시기질투
+        자유로운 날갯짓 훨훨훨
+        꽃송이가 나를 삼킬 걸
+        알면서 난 뛰어들었어
+        Jump j-j-jump jump jump jump</p>
 </body>
-<script></script>
+<script>
+    const h2Tag = document.getElementById("h2");
+    const pTag = document.getElementsByTagName("p");
+    
+    pTag[1].style.color = "blue"
+
+</script>
 </html>
